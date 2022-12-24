@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  bot:
+    build: touch_bot/
+    command: python3 bot.py
+  echo_bot:
+    build: echo_bot/
+    command: python3 bot.py

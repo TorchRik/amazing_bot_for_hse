@@ -39,25 +39,25 @@ async def send_time(message: types.Message):
 
 
 @dp.message_handler(commands=['date'])
-async def send_welcome(message: types.Message):
+async def send_date(message: types.Message):
     now = datetime.datetime.now()
     await message.reply(f"Current date is {babel_dates.format_datetime(now, format='dd:MM')}")
 
 
 @dp.message_handler(commands=['print'])
-async def send_welcome(message: types.Message):
+async def send_print(message: types.Message):
     await message.reply(f"Last amazing string is {amazing_str}")
 
 
 @dp.message_handler(commands=['save'])
-async def send_welcome(message: types.Message):
+async def send_save(message: types.Message):
     global amazing_str
     amazing_str = message['text'][6:]
     await message.reply(f"Saved '{amazing_str}'")
 
 
 @dp.message_handler(commands=['print_amazing_number'])
-async def send_welcome(message: types.Message):
+async def send_amazing_number(message: types.Message):
     await message.reply(f"Amazing number is 42")
 
 
